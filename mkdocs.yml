@@ -1,0 +1,29 @@
+site_name: AADX Documentation
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+
+extra_css:
+      - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.blocks.caption
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets  
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+plugins:
+  - mermaid2:
+      javascript: https://unpkg.com/mermaid@11.12.1/dist/mermaid.esm.min.mjs
+

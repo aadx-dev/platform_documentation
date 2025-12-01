@@ -1232,13 +1232,15 @@ Copy space ERN to clipboard
 
 Now, querying the Workspace API for this `space`, we can extract the ERN of its linked `collection`.
 ```python3 title="Querying the ERN of the space's collection"
-space_id = '<the-space-ern>'
-response = requests.get(f'{base_url}/resources/{space_id}', auth)
+space_id = '<the-space-ern-from-clipboard>'
+
+response = requests.get(f'{base_url}/resources/{space_id}', 
+                        auth=auth)
 pprint(response.json())
 {
   "@id":  "ern:e-pn.io:resource:KG3ZMVG5KA4UHNVATOPALKAB",
   "@type":  "ern:e-pn.io:schema:space",
-  "@owner":  "ern::user:HGJZ532WBDX5T3EBZ4OIJ6Q7",
+  "@owner":  "ern::user:HGJZ532WBDX5T3EBZ4OIJ6Q8",
   "@policy":  "ern:e-pn.io:policy:COEWK27DEY34JL4LYOB7MKGQ",
   "collection":  "ern:e-pn.io:resource:Z2HWUSIQIH6Q7W646BFBXDIU",
   "description":  "test space.",
@@ -1261,7 +1263,7 @@ payload = {
 collection_id = 'ern:e-pn.io:resource:Z2HWUSIQIH6Q7W646BFBXDIU'
 response = request.post(f'{base_url}/resources/{resource_id}/action',
                         auth=auth,
-                        
+                        json=payload)
 ```
 
 After the block as been successfully added to the `collection`, it should immediately be visible within the `space` on the web application.

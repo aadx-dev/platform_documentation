@@ -10,7 +10,7 @@ There is a simple hierarchy of objects within the AADX ([fig 1](#fig-1-basic-obj
 
 ### Access and sharing
 
-A `space` acts as the focal point for accessing and cooperatively sharing resources. To achieve this, `spaceS` can be linked to one or many data-orientated objects called objects called `blockS`. In turn, `blocks` are linked to an actual resource that contains data or acts upon data.
+A `space` acts as the focal point for accessing and cooperatively sharing resources. To achieve this, `spaceS` can be linked to one or many data-descriptive objects called `blockS`. In turn, `blocks` are linked to actual resources that contain data or act upon data.
 
 ### Data-orientated objects
 
